@@ -1,11 +1,11 @@
 # Use an official Node runtime as a parent image
-
+FROM <offical node runtime; search up>
 # Set the working directory in the container
-
-# Copy package.json and package-lock.json
-
+WORKDIR . 
+# Copy package.json and package-lock.json !!DOUBLE CHECK MULTIPLE FILE SYNTAX
+COPY package.json, package-lock.json . 
 # Install app dependencies
-
+RUN pip install -r package.json, package-lock.json 
 # Copy the current directory contents into the container
 
 # Build the app

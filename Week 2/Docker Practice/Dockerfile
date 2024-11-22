@@ -5,13 +5,13 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # TODO-STEP 3: Copy the requirements file
-COPY requirements.txt /app
+COPY requirements.txt .
 
 # TODO-STEP 4: Install the Python dependencies
 RUN pip install -r requirements.txt
 
 # TODO-STEP 5: Copy the application code
-COPY app.py /app
+COPY app.py .
 
 # TODO-STEP 6: Specify the command to run the application
 CMD ["python", "app.py"]
