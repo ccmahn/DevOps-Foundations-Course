@@ -1,5 +1,8 @@
 # TODO: Define stages for your pipeline
 stages:
+  - build
+  - test
+
 
 # TODO: Define variables (if needed)
 variables:
