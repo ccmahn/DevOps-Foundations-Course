@@ -6,7 +6,8 @@ services:
   frontend:
     # Specify the build context for the frontend
     build:
-      - context: ./frontend
+      context: ./frontend
+
     # Map the host port to the container port
     ports:
       - "3000:3000"
@@ -15,7 +16,9 @@ services:
       - backend
 
     # Additional options (uncomment and configure as needed):
-    
+    #adding in network cofiguration:
+    networks:
+      - calcapp-network
     # Specify environment variables if needed
     # environment:
     
@@ -28,12 +31,16 @@ services:
   backend:
     # Specify the build context for the backend
     build:
-      - context: ./backend
+      context: ./backend
     # Map the host port to the container port
     ports:
-      - "5000:5000"
+      - "5001:5001"
     # Additional options (uncomment and configure as needed):
     
+    #adding in network cofiguration:
+    networks:
+      - calcapp-network
+
     # Specify environment variables if needed
     # environment:
     
@@ -45,7 +52,9 @@ services:
 
 # Additional components (uncomment and configure as needed):
 # Define a custom network (if applicable)
-# networks:
+networks:
+  calcapp-network:
+    driver: bridge
 
 # Define volumes (if applicable)
 # volumes:

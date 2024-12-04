@@ -5,18 +5,21 @@ FROM  python:3.9-slim
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY requirements.txt ./
+COPY requirements.txt .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
-# Make port 5000 available to the world outside this container
-EXPOSE 5000
+# Make port 5001 available to the world outside this container
+EXPOSE 5001
+
+#Copy the application code
+COPY . .
 
 # Define environment variable
 #ENV 
 
 # Run app.py when the container launches
-CMD ["python", "app.py", "--port=5000"]
+CMD ["python", "app.py"]
 
 # End of File
