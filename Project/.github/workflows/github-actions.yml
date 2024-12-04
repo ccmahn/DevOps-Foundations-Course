@@ -96,7 +96,7 @@ jobs:
       #configured secrets on github acct for access
       - name: Push images to Docker Hub
         if: github.ref == 'refs/heads/master'
-        run:
+        run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker push app-frontend:latest
           docker push app-backend:latest
