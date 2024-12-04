@@ -1,5 +1,8 @@
-# TODO: Define the Workflow Name
+# TODO: Define the Workflow Name 
 name: Project CI/CD Pipeline
+
+# TROUBLESHOOT WHY PIPELINE NOT RUNNING IN ACTIONS TAB
+
 
 # TODO: Define triggers for the workflow
 on:

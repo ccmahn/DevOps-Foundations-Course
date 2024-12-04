@@ -140,6 +140,8 @@ The purpose of this file is to set up the backend environment for the applicatio
     - Sometimes the app frontend would run but the backend calculations were not running and only gave back error; I had to do some reinstalls of flask to make sure it was working 
     - I learned how to properly use docker-compose; I was able to configure an image/container relatiey easily when I was just using "one folder" like in the week2 exercise, but I find it much more concise to bundle the frontend/backend together. 
 
+- The indentation in my github-actions file was off, so I had to correct those to help the pipeline run 
+
 
 ### Future Improvements
 
